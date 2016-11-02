@@ -23,7 +23,7 @@ public class SIMCard {
             simNumber = mContext.getString(R.string.NO_SIMCard);
 
         return simNumber;
-        }
+    }
 
     //GET MCC(country)
     public static String getMCC (Context mContext){
