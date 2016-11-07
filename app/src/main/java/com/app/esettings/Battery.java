@@ -16,6 +16,7 @@ public class Battery {
     public static String batteryTemperature(Context context) {
         Intent intent = context.registerReceiver(null, new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
         float temp = ((float) intent.getIntExtra(BatteryManager.EXTRA_TEMPERATURE, 0)) / 10;
+
         return String.valueOf(temp) + "*C";
     }
 }
