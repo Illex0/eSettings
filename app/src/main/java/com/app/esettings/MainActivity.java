@@ -25,6 +25,11 @@ public class MainActivity extends AppCompatActivity {
         String mnc = SIMCard.getMNC(getApplicationContext());
         if (mnc != null)
             Toast.makeText(getApplicationContext(),mnc, Toast.LENGTH_SHORT).show();
+
+        //BatteryTemperature test
+        String batTemp = Battery.batteryTemperature(this.getApplicationContext());
+        if (batTemp != null)
+            Toast.makeText(this, batTemp, Toast.LENGTH_SHORT).show();
     }
 
 
