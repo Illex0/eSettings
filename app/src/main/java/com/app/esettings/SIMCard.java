@@ -37,7 +37,6 @@ public class SIMCard {
         } else {
             mcc = mContext.getString(R.string.NO_SIMCard);
         }
-
         return mcc;
     }
 
@@ -53,8 +52,21 @@ public class SIMCard {
         } else {
             mnc = mContext.getString(R.string.NO_SIMCard);
         }
-
         return mnc;
+    }
 
+    // GET SIM Serial Number
+    public static String getSerialNumber (Context mContext){
+
+        String simSerialNumber;
+        TelephonyManager mTelephonyManager = (TelephonyManager) mContext.getSystemService(Context.TELEPHONY_SERVICE);
+
+        if (mTelephonyManager.getSimSerialNumber() != null) {
+            simSerialNumber = mTelephonyManager.getSimSerialNumber();
+
+        } else {
+            simSerialNumber = mContext.getString(R.string.NO_SIMCard);
+        }
+        return simSerialNumber;
     }
 }
