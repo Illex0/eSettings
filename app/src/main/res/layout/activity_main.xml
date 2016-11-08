@@ -19,4 +19,25 @@
         android:layout_marginTop="72dp"
         android:text="ADORO BANDA RED!!!!"
         android:textSize="40dp" />
+
+    <ImageView
+        android:id="@+id/simSection_icon"
+        android:contentDescription="@string/sim_card_text_menu_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/MenuSimCardIcon"
+        android:onClick="onClicSIMCard"
+        />
+
+    <TextView
+        android:id="@+id/simSection_Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dp"
+        android:layout_below="@+id/simSection_icon"
+        android:gravity="center"
+        android:text="@string/sim_card_text_menu"
+        android:onClick="onClicSIMCard"
+        />
+
 </RelativeLayout>

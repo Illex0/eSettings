@@ -35,7 +35,7 @@ public class SIMCard {
             mcc = mTelephonyManager.getSimCountryIso();
 
         } else {
-            mcc = mContext.getString(R.string.NO_SIMCard);
+            mcc = mContext.getString(R.string.error);
         }
         return mcc;
     }
@@ -50,7 +50,7 @@ public class SIMCard {
             mnc = mTelephonyManager.getSimOperator();
 
         } else {
-            mnc = mContext.getString(R.string.NO_SIMCard);
+            mnc = mContext.getString(R.string.error);
         }
         return mnc;
     }
@@ -65,7 +65,7 @@ public class SIMCard {
             simSerialNumber = mTelephonyManager.getSimSerialNumber();
 
         } else {
-            simSerialNumber = mContext.getString(R.string.NO_SIMCard);
+            simSerialNumber = mContext.getString(R.string.error);
         }
         return simSerialNumber;
     }

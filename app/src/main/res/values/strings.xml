@@ -1,5 +1,13 @@
 <resources>
     <string name="app_name">eSettings</string>
     <string name="NO_SIMCard">No SIM card detected</string>
+    <string name="error">No Information</string>
+    <string name="sim_card_text_menu">SIM Card</string>
+    <string name="sim_card_text_menu_desc">SIM Card icon</string>
+
+    <string name="sim_card_MSISDN">Number:</string>
+    <string name="sim_card_country">Country:</string>
+    <string name="sim_card_MNC">MNC:</string>
+    <string name="sim_serial_number">SIM Serial Number:</string>
 
 </resources>
