@@ -30,10 +30,16 @@ public class Battery {
     }
 
     //Check if device is plugged or not
-    public static boolean isConnected(Context context) {
+    public static String isConnected(Context context) {
+        String on = "on";
+        String off = "off";
         Intent intent = context.registerReceiver(null, new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
         int plugged = intent.getIntExtra(BatteryManager.EXTRA_PLUGGED, -1);
-        return plugged == BatteryManager.BATTERY_PLUGGED_AC || plugged == BatteryManager.BATTERY_PLUGGED_USB;
+        Integer.toString(plugged);
+        if (plugged == 1)
+            return on;
+        else
+            return off;
     }
 }
 

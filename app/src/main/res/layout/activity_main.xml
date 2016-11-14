@@ -10,34 +10,51 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="300dp"
-        android:layout_height="100dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="72dp"
-        android:text="ADORO BANDA RED!!!!"
-        android:textSize="40dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/simSection_icon"
-        android:contentDescription="@string/sim_card_text_menu_desc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        style="@style/MenuSimCardIcon"
-        android:onClick="onClicSIMCard"
-        />
+        <ImageView
+            android:id="@+id/simSection_icon"
+            style="@style/MenuSimCardIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/sim_card_text_menu_desc"
+            android:onClick="onClicSIMCard" />
 
-    <TextView
-        android:id="@+id/simSection_Text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="1dp"
-        android:layout_below="@+id/simSection_icon"
-        android:gravity="center"
-        android:text="@string/sim_card_text_menu"
-        android:onClick="onClicSIMCard"
-        />
+        <TextView
+            android:id="@+id/simSection_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_below="@+id/simSection_icon"
+            android:layout_marginLeft="-45dp"
+            android:layout_marginTop="45dp"
+            android:gravity="center"
+            android:onClick="onClicSIMCard"
+            android:text="@string/sim_card_text_menu"
+            android:textSize="10sp" />
+
+        <ImageView
+            android:id="@+id/battery_icon"
+            style="@style/MenuBatteryIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="2dp"
+            android:contentDescription="@string/sim_card_text_menu_desc" />
+
+        <TextView
+            android:id="@+id/batterySection_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_below="@+id/battery_icon"
+            android:layout_marginLeft="-37dp"
+            android:layout_marginTop="45dp"
+            android:gravity="center"
+            android:text="@string/battery_section"
+            android:textSize="10sp" />
+
+
+    </LinearLayout>
 
 </RelativeLayout>

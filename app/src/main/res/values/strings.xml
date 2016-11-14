@@ -10,4 +10,6 @@
     <string name="sim_card_MNC">MNC:</string>
     <string name="sim_serial_number">SIM Serial Number:</string>
 
+    <string name="battery_section">Battery</string>
+
 </resources>
