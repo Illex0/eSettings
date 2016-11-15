@@ -11,5 +11,8 @@
     <string name="sim_serial_number">SIM Serial Number:</string>
 
     <string name="battery_section">Battery</string>
+    <string name="battery_temperature_label">Temperature:</string>
+    <string name="battery_voltage_label">Voltage:</string>
+    <string name="battery_plugged_label">Plugged:</string>
 
 </resources>

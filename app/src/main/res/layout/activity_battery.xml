@@ -15,7 +15,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Temperature:"
+        android:text="@string/battery_temperature_label"
         android:textStyle="bold" />
 
     <TextView
@@ -32,7 +32,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/temperature_text"
         android:gravity="center"
-        android:text="Voltage:"
+        android:text="@string/battery_voltage_label"
         android:textStyle="bold" />
 
     <TextView
@@ -50,7 +50,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/voltage_text"
         android:gravity="center"
-        android:text="Plugged:"
+        android:text="@string/battery_plugged_label"
         android:textStyle="bold" />
 
     <TextView
