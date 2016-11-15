@@ -17,6 +17,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".SimCardActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name=".BatteryActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

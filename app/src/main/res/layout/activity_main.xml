@@ -41,7 +41,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="2dp"
-            android:contentDescription="@string/sim_card_text_menu_desc" />
+            android:contentDescription="BatteryIcon"
+            android:onClick="onClicBattery" />
 
         <TextView
             android:id="@+id/batterySection_Text"

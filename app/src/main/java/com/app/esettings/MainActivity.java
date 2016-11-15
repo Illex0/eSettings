@@ -21,4 +21,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, SimCardActivity.class);
         this.startActivity(intent);
     }
+
+    public void onClicBattery(View v) {
+        Intent intent = new Intent(this, BatteryActivity.class);
+        this.startActivity(intent);
+    }
 }

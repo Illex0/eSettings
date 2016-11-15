@@ -23,6 +23,8 @@ public class BatteryActivity extends AppCompatActivity {
 
         temperature.setText(Battery.batteryTemperature(this.getApplicationContext()));
         voltage.setText(Battery.batteryVoltage(this.getApplicationContext()));
-        plugged.setText(Battery.isConnected(this.getApplicationContext()));
+        boolean plug = Battery.isConnected2(this);
+        String str = Boolean.toString(plug);
+        plugged.setText(str);
     }
 }
