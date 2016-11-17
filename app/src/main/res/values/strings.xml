@@ -14,5 +14,6 @@
     <string name="battery_temperature_label">Temperature:</string>
     <string name="battery_voltage_label">Voltage:</string>
     <string name="battery_plugged_label">Plugged:</string>
+    <string name="battery_percentage_label">Percentage:</string>
 
 </resources>

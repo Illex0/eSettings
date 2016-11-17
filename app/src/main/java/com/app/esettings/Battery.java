@@ -15,12 +15,20 @@ import android.util.Log;
 
 public class Battery {
 
+    //Get battery percentage
+    public static String batteryPercentage(Context context) {
+        Intent intent = context.registerReceiver(null, new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
+        int percentage = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, 0);
+
+        return String.valueOf(percentage) + "%";
+    }
+
     //Get battery temperature
     public static String batteryTemperature(Context context) {
         Intent intent = context.registerReceiver(null, new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
-        float temp = ((float) intent.getIntExtra(BatteryManager.EXTRA_TEMPERATURE, 0)) / 10;
+        double temp = ((double) intent.getIntExtra(BatteryManager.EXTRA_TEMPERATURE, 0)) / 10;
 
-        return String.valueOf(temp) + "ºC";
+        return String.format("%.1f", temp).valueOf(temp) + "ºC";
     }
 
     //Get battery voltage
@@ -32,18 +40,6 @@ public class Battery {
     }
 
     //Check if device is plugged or not
-    public static String isConnected(Context context) {
-        String on = "Yes";
-        String off = "Your device is unplugged";
-        Intent intent = context.registerReceiver(null, new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
-        int plugged = intent.getIntExtra(BatteryManager.EXTRA_PLUGGED, -1);
-        Integer.toString(plugged);
-        if (plugged == 0)
-            return on;
-        else
-            return off;
-    }
-
     public static boolean isConnected2(Context context) {
         boolean isPlugged = false;
         Intent intent = context.registerReceiver(null, new IntentFilter(Intent.ACTION_BATTERY_CHANGED));

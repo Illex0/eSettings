@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_sim_card"
     android:layout_width="match_parent"
@@ -10,10 +11,46 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.app.esettings.BatteryActivity">
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_above="@+id/relativeLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="100dp"
+        app:srcCompat="@mipmap/battery2" />
+
+    <RelativeLayout
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="17dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginRight="26dp">
     <TextView
+        android:id="@+id/percentage_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/battery_percentage_label"
+        android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/percentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/percentage_text"
+            android:gravity="center" />
+
+        <TextView
         android:id="@+id/temperature_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+            android:layout_below="@id/percentage_text"
         android:gravity="center"
         android:text="@string/battery_temperature_label"
         android:textStyle="bold" />
@@ -22,6 +59,7 @@
         android:id="@+id/temperature"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/percentage"
         android:layout_marginLeft="5dp"
         android:layout_toRightOf="@+id/temperature_text"
         android:gravity="center" />
@@ -61,6 +99,8 @@
         android:layout_marginLeft="5dp"
         android:layout_toRightOf="@+id/plugged_text"
         android:gravity="center" />
+
+    </RelativeLayout>
 
 
 </RelativeLayout>

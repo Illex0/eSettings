@@ -20,9 +20,11 @@ public class BatteryActivity extends AppCompatActivity {
         TextView temperature = (TextView) findViewById(R.id.temperature);
         TextView voltage = (TextView) findViewById(R.id.voltage);
         TextView plugged = (TextView) findViewById(R.id.plugged);
+        TextView percentage = (TextView) findViewById(R.id.percentage);
 
         temperature.setText(Battery.batteryTemperature(this.getApplicationContext()));
         voltage.setText(Battery.batteryVoltage(this.getApplicationContext()));
+        percentage.setText(Battery.batteryPercentage(this.getApplicationContext()));
         boolean plug = Battery.isConnected2(this);
         String str = Boolean.toString(plug);
         plugged.setText(str);
