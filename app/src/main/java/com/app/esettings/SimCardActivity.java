@@ -1,9 +1,9 @@
 package com.app.esettings;
 
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
-import android.widget.Toast;
 
 // TODO - Back button
 public class SimCardActivity extends AppCompatActivity {
@@ -12,7 +12,7 @@ public class SimCardActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sim_card);
-        Toast.makeText(this, "Clicked on Button", Toast.LENGTH_LONG).show();
+
 
         TextView MSISDN=(TextView)findViewById(R.id.MSISDN);
         MSISDN.setText(SIMCard.getNumber(this));

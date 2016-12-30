@@ -23,29 +23,37 @@ public class BatteryActivity extends AppCompatActivity {
         TextView voltage = (TextView) findViewById(R.id.voltage);
         TextView plugged = (TextView) findViewById(R.id.plugged);
         TextView percentage = (TextView) findViewById(R.id.percentage);
-        ImageView BatteryLow = (ImageView) findViewById(R.id.imageView2);
-        ImageView BatteryMediumLow = (ImageView) findViewById(R.id.imageView3);
-        ImageView BatteryMediumHigh = (ImageView) findViewById(R.id.imageView4);
-        ImageView BatteryHigh = (ImageView) findViewById(R.id.imageView5);
-        String percentage2 = Battery.batteryPercentage(this.getApplicationContext());
 
-        int per = Integer.parseInt(percentage2);
+        if (!Battery.isConnected2(this)) {
+            // !Plugged
+            String percentage2 = Battery.batteryPercentage(this.getApplicationContext());
+            int per = Integer.parseInt(percentage2);
+            if (per <= 25) {
+                ImageView BatteryLow = (ImageView) findViewById(R.id.imageView2);
+                BatteryLow.setVisibility(View.VISIBLE);
+            } else if (per > 25 && per <= 50) {
+                ImageView BatteryMediumLow = (ImageView) findViewById(R.id.imageView3);
+                BatteryMediumLow.setVisibility(View.VISIBLE);
+            } else if (per > 50 && per <= 75) {
+                ImageView BatteryMediumHigh = (ImageView) findViewById(R.id.imageView4);
+                BatteryMediumHigh.setVisibility(View.VISIBLE);
+            } else {
+                ImageView BatteryHigh = (ImageView) findViewById(R.id.imageView5);
+                BatteryHigh.setVisibility(View.VISIBLE);
+            }
+            percentage.setText(Battery.batteryPercentage(this.getApplicationContext())+"%");
+            plugged.setText("False");
 
-        if (per <= 25) {
-            BatteryLow.setVisibility(View.VISIBLE);
-        } else if (per > 25 && per <= 50) {
-            BatteryMediumLow.setVisibility(View.VISIBLE);
-        } else if (per > 50 && per <= 75) {
-            BatteryMediumHigh.setVisibility(View.VISIBLE);
         } else {
-            BatteryHigh.setVisibility(View.VISIBLE);
+            ImageView BatteryCharge = (ImageView) findViewById(R.id.imageView1);
+            BatteryCharge.setVisibility(View.VISIBLE);
+            percentage.setText("Charging ... ");
+            plugged.setText("True");
+
         }
 
         temperature.setText(Battery.batteryTemperature(this.getApplicationContext()));
         voltage.setText(Battery.batteryVoltage(this.getApplicationContext()));
-        percentage.setText(Battery.batteryPercentage(this.getApplicationContext()));
-        boolean plug = Battery.isConnected2(this);
-        String str = Boolean.toString(plug);
-        plugged.setText(str);
+
     }
 }

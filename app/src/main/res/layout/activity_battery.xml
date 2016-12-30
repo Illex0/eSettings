@@ -12,6 +12,16 @@
     tools:context="com.app.esettings.BatteryActivity">
 
     <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="100dp"
+        android:visibility="invisible"
+        app:srcCompat="@mipmap/battery_charge" />
+
+    <ImageView
         android:id="@+id/imageView2"
         android:layout_width="200dp"
         android:layout_height="200dp"
@@ -57,7 +67,7 @@
         android:layout_alignLeft="@+id/imageView2"
         android:layout_alignParentBottom="true"
         android:layout_alignStart="@+id/imageView2"
-        android:layout_below="@id/imageView"
+        android:layout_below="@id/imageView5"
         android:layout_marginBottom="37dp">
     <TextView
         android:id="@+id/percentage_text"

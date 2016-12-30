@@ -1,13 +1,11 @@
 package com.app.esettings;
 
-import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.BatteryManager;
 import android.os.Build;
-import android.os.Bundle;
-import android.util.Log;
+
 
 /**
  * Created by Luís Ferreira on 02/11/2016.
@@ -20,7 +18,7 @@ public class Battery {
         Intent intent = context.registerReceiver(null, new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
         int percentage = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, 0);
 
-        return String.valueOf(percentage) + "%";
+        return String.valueOf(percentage);
     }
 
     //Get battery temperature

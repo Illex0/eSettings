@@ -1,6 +1,8 @@
 package com.app.esettings;
 
+import android.Manifest;
 import android.content.Context;
+import android.support.v4.app.ActivityCompat;
 import android.telephony.TelephonyManager;
 
 /**
@@ -14,6 +16,7 @@ public class SIMCard {
 
     // GET SIM Card NUmber
     public static String getNumber(Context mContext){
+
         String simNumber;
         TelephonyManager mTelephonyManager = (TelephonyManager) mContext.getSystemService(Context.TELEPHONY_SERVICE);
 
