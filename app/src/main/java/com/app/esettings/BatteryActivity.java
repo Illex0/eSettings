@@ -41,14 +41,14 @@ public class BatteryActivity extends AppCompatActivity {
                 ImageView BatteryHigh = (ImageView) findViewById(R.id.imageView5);
                 BatteryHigh.setVisibility(View.VISIBLE);
             }
-            percentage.setText(Battery.batteryPercentage(this.getApplicationContext())+"%");
-            plugged.setText("False");
+            percentage.setText(Battery.batteryPercentage(this.getApplicationContext())+R.string.percentage);
+            plugged.setText(R.string.falsePlug);
 
         } else {
             ImageView BatteryCharge = (ImageView) findViewById(R.id.imageView1);
             BatteryCharge.setVisibility(View.VISIBLE);
-            percentage.setText("Charging ... ");
-            plugged.setText("True");
+            percentage.setText(R.string.charging);
+            plugged.setText(R.string.truePlug);
 
         }
 

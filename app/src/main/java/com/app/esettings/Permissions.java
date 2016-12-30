@@ -5,8 +5,6 @@ import android.content.pm.PackageManager;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 
-
-
 /**
  * Created by pcuco on 28/12/2016.
  */
@@ -30,17 +28,5 @@ public class Permissions {
         ActivityCompat.requestPermissions(view, new String[]{permission}, 2);
 
     }
-
-
-
-
-
-    ///// ----------------------
-
-
-
-
-
-
 
 }

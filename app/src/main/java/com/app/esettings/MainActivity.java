@@ -6,6 +6,7 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageButton;
 
@@ -17,26 +18,21 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        //Request permissions
-        //Permissions.phoneState(this);
-        //Permissions.askForPermission(Manifest.permission.READ_PHONE_STATE,CALL,this);
-
-
-        //Validation
-        //Permissions.permissionsValidation(this);
-
 
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ImageButton backButton = (ImageButton) this.findViewById(R.id.backButton);
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        //ImageButton backButton = (ImageButton) this.findViewById(R.id.backButton);
+        //backButton.setOnClickListener(new View.OnClickListener() {
+          //  @Override
+           // public void onClick(View v) {
+             //   finish();
+           // }
+
+            //Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+            //setSupportActionBar(myToolbar);
+        //});
     }
 
 
