@@ -9,7 +9,6 @@ import android.telephony.TelephonyManager;
  * Created by pcuco on 30/10/2016.
  */
 
-// @TODO - Android 6 permissions
 // @TODO - Dual SIM
 
 public class SIMCard {
@@ -21,9 +20,16 @@ public class SIMCard {
         TelephonyManager mTelephonyManager = (TelephonyManager) mContext.getSystemService(Context.TELEPHONY_SERVICE);
 
         if (mTelephonyManager.getLine1Number() != null) {
-            simNumber = mTelephonyManager.getLine1Number();
+
+            if (mTelephonyManager.getLine1Number().equals(""))
+                simNumber = mContext.getString(R.string.unknown_SIM_number);
+            else
+                simNumber = mTelephonyManager.getLine1Number();
+
         } else
             simNumber = mContext.getString(R.string.NO_SIMCard);
+
+
 
         return simNumber;
     }

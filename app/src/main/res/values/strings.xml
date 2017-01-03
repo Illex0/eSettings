@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">eSettings</string>
     <string name="NO_SIMCard">No SIM card detected</string>
+    <string name="unknown_SIM_number">Unknown</string>
     <string name="error">No Information</string>
     <string name="sim_card_text_menu">SIM Card</string>
     <string name="sim_card_text_menu_desc">SIM Card icon</string>
