@@ -29,8 +29,6 @@ public class SIMCard {
         } else
             simNumber = mContext.getString(R.string.NO_SIMCard);
 
-
-
         return simNumber;
     }
 
@@ -69,7 +67,6 @@ public class SIMCard {
 
         String simSerialNumber;
         TelephonyManager mTelephonyManager = (TelephonyManager) mContext.getSystemService(Context.TELEPHONY_SERVICE);
-
         if (mTelephonyManager.getSimSerialNumber() != null) {
             simSerialNumber = mTelephonyManager.getSimSerialNumber();
 
@@ -77,5 +74,19 @@ public class SIMCard {
             simSerialNumber = mContext.getString(R.string.error);
         }
         return simSerialNumber;
+    }
+
+    // GET SIM IMSI Number
+    public static String getIMSI (Context mContext){
+
+        String simIMSI;
+        TelephonyManager mTelephonyManager = (TelephonyManager) mContext.getSystemService(Context.TELEPHONY_SERVICE);
+        if (mTelephonyManager.getSubscriberId() != null) {
+            simIMSI = mTelephonyManager.getSubscriberId();
+
+        } else {
+            simIMSI = mContext.getString(R.string.error);
+        }
+        return simIMSI;
     }
 }

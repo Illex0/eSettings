@@ -97,4 +97,25 @@
             android:layout_below="@+id/mnc"
             android:gravity="center"/>
 
+        <TextView
+            android:id="@+id/SIM_IMSI_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:layout_below="@+id/SIM_serialNumber_text"
+            android:gravity="center"
+            android:text="@string/sim_IMSI"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/SIM_IMSI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/SIM_IMSI_text"
+            android:layout_below="@+id/SIM_serialNumber_text"
+            android:gravity="center"/>
+
 </RelativeLayout>

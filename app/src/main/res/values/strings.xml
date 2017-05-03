@@ -10,6 +10,8 @@
     <string name="sim_card_country">Country:</string>
     <string name="sim_card_MNC">MNC:</string>
     <string name="sim_serial_number">SIM Serial Number:</string>
+    <string name="sim_IMSI">IMSI:</string>
+
 
     <string name="battery_section">Battery</string>
     <string name="battery_temperature_label">Temperature:</string>

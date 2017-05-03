@@ -9,6 +9,9 @@ import android.support.v4.content.ContextCompat;
  * Created by pcuco on 28/12/2016.
  */
 
+
+// TODO "Never ask again"
+
 public class Permissions {
 
 

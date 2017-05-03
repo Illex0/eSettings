@@ -26,6 +26,9 @@ public class SimCardActivity extends AppCompatActivity {
         TextView simSerialNumber=(TextView)findViewById(R.id.SIM_serialNumber);
         simSerialNumber.setText(SIMCard.getSerialNumber(this));
 
+        TextView simIMSI=(TextView)findViewById(R.id.SIM_IMSI);
+        simIMSI.setText(SIMCard.getIMSI(this));
+
 
     }
 }
